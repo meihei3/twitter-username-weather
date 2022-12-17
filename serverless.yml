@@ -33,6 +33,8 @@ functions:
       TWITTER_AT: ${env:TWITTER_AT}
       TWITTER_CK: ${env:TWITTER_CK}
       TWITTER_CS: ${env:TWITTER_CS}
+    events:
+      - schedule: cron(0 * * * ? *)
 
 plugins:
   - serverless-python-requirements
