@@ -23,8 +23,8 @@ provider:
   logRetentionInDays: 30
 
 functions:
-  hello:
-    handler: handler.hello
+  main:
+    handler: handler.lambda_handler
 
 plugins:
   - serverless-python-requirements
