@@ -15,6 +15,8 @@ service: twitter-username-weather
 
 frameworkVersion: '3'
 
+useDotenv: true
+
 provider:
   name: aws
   runtime: python3.9
@@ -25,6 +27,12 @@ provider:
 functions:
   main:
     handler: handler.lambda_handler
+    environment:
+      OPEN_WEATHER_MAP_API_KEY: ${env:OPEN_WEATHER_MAP_API_KEY}
+      TWITTER_AS: ${env:TWITTER_AS}
+      TWITTER_AT: ${env:TWITTER_AT}
+      TWITTER_CK: ${env:TWITTER_CK}
+      TWITTER_CS: ${env:TWITTER_CS}
 
 plugins:
   - serverless-python-requirements
