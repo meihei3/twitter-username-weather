@@ -68,4 +68,5 @@ def lambda_handler(event, context):
 
 if __name__ == '__main__':
     w = get_weather()
-    print(w)
+    name = get_user_name()
+    print(name, w)
